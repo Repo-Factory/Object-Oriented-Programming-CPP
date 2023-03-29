@@ -1,0 +1,23 @@
+//    Emp_1.name_ = "John";
+//    Emp_1.ID_ = 2121;
+//    Emp_1.salary_ = 11000;
+
+//    ofstream file1;
+//    file1.open("Employees/owner.txt", ios::app);
+//    file1.write((char*)&Emp_1, sizeof(Emp_1));
+//    file1.close();
+
+//     ifstream file_handle;
+    
+//     // Opening file in input mode
+//     file_handle.open("Employees/onwer.txt", ios::in);
+
+//     // Object of class contestant to input data in file
+//     Employee employee;
+
+//     // Reading from file into object "obj"
+//     file_handle.read((char*)&employee, sizeof(employee));
+        
+//     // close the file.
+//     //It's always a good practice to close the file after opening them
+//     file_handle.close(); 
