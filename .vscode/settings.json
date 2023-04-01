@@ -31,6 +31,7 @@
         "tuple": "cpp",
         "variant": "cpp",
         "condition_variable": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iosfwd": "cpp"
     }
 }

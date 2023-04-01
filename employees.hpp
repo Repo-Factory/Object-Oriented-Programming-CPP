@@ -20,7 +20,6 @@ class Waiter;
 
 typedef vector<shared_ptr<Employee>>    employee_vector_t;
 typedef shared_ptr<Employee>            employee_ptr_t;
-typedef unordered_map<string, string>   category_map_t;
 
 /* Restaurant stores database that is implemented as a vector of Employee pointers (std::shared_ptr) */
 class Restaurant
@@ -32,6 +31,7 @@ class Restaurant
         void setProfits(float profits)                          {this->profits_ = profits;}
 
         void addEmployee(employee_ptr_t employee);
+        void populateEmployees(string filename, float tips1, float tips2, float tips3);
         void printInfo();
         
     private:

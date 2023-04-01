@@ -2,31 +2,33 @@
 
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include "employees.hpp"
-
 using namespace std;
-
-#define PROFITS 5000
 
 int main()
 {   
-    /* Construct Object Pointers Based On File Information */
-    Restaurant restaurant                           (PROFITS);
-    employee_ptr_t owner   =    make_shared<Owner>  ("Dale",      1           );
-    employee_ptr_t chef1   =    make_shared<Chef>   ("Luigi",     2, "Italian");
-    employee_ptr_t chef2   =    make_shared<Chef>   ("Francisco", 3, "Spanish");
-    employee_ptr_t waiter1 =    make_shared<Waiter> ("Jeremiah",  4, 150, 3   );
-    employee_ptr_t waiter2 =    make_shared<Waiter> ("Bradley",   5, 240, 4   );
-    employee_ptr_t waiter3 =    make_shared<Waiter> ("Cheryll",   6, 300, 5   );
+    /* Capture user input for profits and waiter tips */
+    float profits;
+    float tips1;
+    float tips2;
+    float tips3;
 
-    /* Add Employees to Database */
-    restaurant.addEmployee(owner);
-    restaurant.addEmployee(chef1);
-    restaurant.addEmployee(chef2);
-    restaurant.addEmployee(waiter1);
-    restaurant.addEmployee(waiter2);
-    restaurant.addEmployee(waiter3);
+    cout << "Hello, Welcome to the Restaurant Database\n";
+    cout << "Give us the statistics for the month and we can show you projected employee profits\n\n";
+    cout << "Type in the profits for the month: ";
+    cin  >> profits;
+    cout << "\nLet's record the tips for each waiter\n";
+    cout << "Tips for waiter 1: ";
+    cin  >> tips1;
+    cout << "Tips for waiter 2: ";
+    cin  >> tips2;
+    cout << "Tips for waiter 3: ";
+    cin  >> tips3; 
 
-    /* Print Data For Each Employee */
+    /* Construct Object Pointers Based On File Information and Print Database Info */
+    Restaurant restaurant(profits);
+    restaurant.populateEmployees("employees.txt", tips1, tips2, tips3);
     restaurant.printInfo();  
 }
+

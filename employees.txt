@@ -1,0 +1,6 @@
+Owner   Jenny        1  None
+Chef    Luigi        2  Italian
+Chef    Francisco    3  Spanish
+Waiter  Cheryll      4  None    3
+Waiter  Chris        5  None    5
+Waiter  Sam          6  None    7
