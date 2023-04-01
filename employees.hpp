@@ -62,7 +62,8 @@ class Employee
         void setProfitShare(float profit_share)                 {this->profit_share_ = profit_share;}
         
         virtual float calculateSalary(float profits);
-        virtual void printInfo(float month_profits);
+        virtual void printInfo();
+        void printSalary(float profits);
 
     private:
         string name_;
@@ -88,7 +89,7 @@ class Chef : public Employee
         inline string getSpeciality()                           {return this->cuisine_speciality_;}
         void setSpeciality(string cuisine_speciality)           {this->cuisine_speciality_ = cuisine_speciality;}
         
-        virtual void printInfo(float month_profits);
+        virtual void printInfo();
     private:
         string cuisine_speciality_;
 
@@ -106,7 +107,8 @@ class Waiter : public Employee
         void setTips(float tips_earned)                         {this->tips_earned_ = tips_earned;}
 
         virtual float calculateSalary(float profits);
-        virtual void printInfo(float month_profits);
+        virtual void printInfo();
+        void printSalary(float profits);
     private:
         int service_years_;
         float tips_earned_;
