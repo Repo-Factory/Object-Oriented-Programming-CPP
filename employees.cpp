@@ -71,7 +71,6 @@ void Restaurant::populateEmployees(string filename, float tips1, float tips2, fl
             this->addEmployee(waiter);
             i++;
         }
-
     }
 }
 

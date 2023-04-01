@@ -9,10 +9,7 @@ using namespace std;
 int main()
 {   
     /* Capture user input for profits and waiter tips */
-    float profits;
-    float tips1;
-    float tips2;
-    float tips3;
+    float profits, tips1, tips2, tips3;
 
     cout << "Hello, Welcome to the Restaurant Database\n";
     cout << "Give us the statistics for the month and we can show you projected employee profits\n\n";
